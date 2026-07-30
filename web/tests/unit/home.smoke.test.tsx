@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Home from "@/app/page";
 
-describe("Home page (smoke)", () => {
+describe("Home page (smoke, T-10.3)", () => {
   it("renders exactly one h1", () => {
     render(<Home />);
 

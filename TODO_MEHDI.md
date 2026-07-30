@@ -25,7 +25,11 @@ placeholders restent tels quels dans le code tant que ces points ne sont pas tra
 - [ ] **Outil analytics** : lequel, et confirmation qu'il est sans cookie
       (pour éviter la bannière RGPD — cf. cahier §11)
 - [ ] **Domaine de production** (pour les métadonnées SEO, `sitemap.xml`,
-      `robots.txt`, et la config Vercel)
+      `robots.txt`, et la config Vercel). Tant que ce domaine n'est pas connu,
+      `metadataBase` n'est pas défini dans `web/src/app/metadata.ts` : Next.js
+      résout les images Open Graph avec `http://localhost:3000` en attendant
+      (warning au build, sans impact en dev). À corriger dès que le domaine
+      est fixé.
 
 ## Comment fournir les réponses
 Édite directement les valeurs correspondantes dans `web/src/config/site.ts`
