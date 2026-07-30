@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { getStructuredData } from "@/lib/structuredData";
 import Nav from "@/components/Nav";
@@ -6,14 +6,22 @@ import Footer from "@/components/Footer";
 
 export { metadata } from "./metadata";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-data",
+  subsets: ["latin"],
+  weight: ["500", "600"],
 });
 
 export default function RootLayout({
@@ -32,7 +40,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${jetBrainsMono.variable} bg-cream font-body text-ink antialiased`}
       >
         <Nav />
         {children}

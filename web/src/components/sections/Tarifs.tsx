@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Check } from "lucide-react";
 import { site } from "@/config/site";
 
 export default function Tarifs() {
@@ -9,72 +10,135 @@ export default function Tarifs() {
   const monthsBilled = 12 - annual.monthsFree;
 
   return (
-    <section id="tarifs" aria-labelledby="tarifs-heading">
-      <h2 id="tarifs-heading">Tarifs</h2>
-      <p>{site.pricingAnchor}</p>
-
-      <div role="group" aria-label="Périodicité de facturation">
-        <button
-          type="button"
-          aria-pressed={!isAnnual}
-          onClick={() => setIsAnnual(false)}
+    <section id="tarifs" aria-labelledby="tarifs-heading" className="py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+        <h2
+          id="tarifs-heading"
+          className="max-w-2xl text-3xl font-bold text-ink sm:text-4xl"
         >
-          Mensuel
-        </button>
-        <button
-          type="button"
-          aria-pressed={isAnnual}
-          onClick={() => setIsAnnual(true)}
-        >
-          Annuel ({annual.savingsPct} % d&apos;économie)
-        </button>
-      </div>
+          Tarifs
+        </h2>
+        <p className="mt-3 max-w-2xl text-slate">{site.pricingAnchor}</p>
 
-      {founding.spotsLeft > 0 && (
-        <p role="status">
-          {founding.label} — {founding.spotsLeft} places restantes
-        </p>
-      )}
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div
+            role="group"
+            aria-label="Périodicité de facturation"
+            className="inline-flex rounded-full bg-sand p-1"
+          >
+            <button
+              type="button"
+              aria-pressed={!isAnnual}
+              onClick={() => setIsAnnual(false)}
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                !isAnnual ? "bg-emerald text-cream" : "text-ink/70"
+              }`}
+            >
+              Mensuel
+            </button>
+            <button
+              type="button"
+              aria-pressed={isAnnual}
+              onClick={() => setIsAnnual(true)}
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                isAnnual ? "bg-emerald text-cream" : "text-ink/70"
+              }`}
+            >
+              Annuel ({annual.savingsPct} % d&apos;économie)
+            </button>
+          </div>
 
-      <ul>
-        {plans.map((plan) => (
-          <li key={plan.id}>
-            {plan.highlighted && plan.badge && <span>{plan.badge}</span>}
-            <h3>{plan.name}</h3>
-            <p>{plan.target}</p>
-            {plan.foundingMonthly === null || plan.catalogMonthly === null ? (
-              <p>Sur devis</p>
-            ) : (
-              <p>
-                <span>{plan.catalogMonthly} €</span>
-                <strong>
-                  {isAnnual
-                    ? `${plan.foundingMonthly * monthsBilled} € / an`
-                    : `${plan.foundingMonthly} € ${plan.unit}`}
-                </strong>
+          {founding.spotsLeft > 0 && (
+            <p
+              role="status"
+              className="rounded-full bg-amber/15 px-4 py-2 text-sm font-semibold text-amber"
+            >
+              {founding.label} — {founding.spotsLeft} places restantes
+            </p>
+          )}
+        </div>
+
+        <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+          {plans.map((plan) => (
+            <li
+              key={plan.id}
+              className={`relative flex flex-col rounded-2xl border p-6 sm:p-7 ${
+                plan.highlighted
+                  ? "border-emerald bg-cream shadow-lg shadow-emerald/15"
+                  : "border-ink/10 bg-cream shadow-sm shadow-ink/5"
+              }`}
+            >
+              {plan.highlighted && plan.badge && (
+                <span className="absolute -top-3 left-6 rounded-full bg-emerald px-3 py-1 text-xs font-semibold text-cream">
+                  {plan.badge}
+                </span>
+              )}
+              <h3 className="text-xl font-semibold text-ink">{plan.name}</h3>
+              <p className="mt-1 text-sm text-slate">{plan.target}</p>
+
+              {plan.foundingMonthly === null || plan.catalogMonthly === null ? (
+                <p className="mt-5 font-mono text-3xl font-semibold text-ink">
+                  Sur devis
+                </p>
+              ) : (
+                <div className="mt-5">
+                  <span className="font-mono text-sm text-slate line-through">
+                    {plan.catalogMonthly} €
+                  </span>
+                  <p className="font-mono text-3xl font-semibold text-emerald-dark">
+                    {isAnnual
+                      ? `${plan.foundingMonthly * monthsBilled} €`
+                      : `${plan.foundingMonthly} €`}
+                    <span className="ml-1 text-sm font-normal text-slate">
+                      {isAnnual ? "/ an" : plan.unit}
+                    </span>
+                  </p>
+                </div>
+              )}
+
+              <p className="mt-3 text-sm font-medium text-emerald-dark">
+                {plan.anchorLine}
               </p>
-            )}
-            <p>{plan.anchorLine}</p>
-            <ul>
-              {plan.features.map((feature) => (
-                <li key={feature}>{feature}</li>
-              ))}
-            </ul>
-            <a href={`/contact?segment=${plan.segment}`}>Choisir {plan.name}</a>
-          </li>
-        ))}
-      </ul>
 
-      <ul>
-        {offers.map((offer) => (
-          <li key={offer.id}>
-            <h4>{offer.title}</h4>
-            <p>{offer.body}</p>
-          </li>
-        ))}
-      </ul>
+              <ul className="mt-5 flex-1 space-y-2.5">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-ink/80">
+                    <Check
+                      aria-hidden="true"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-emerald"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
-      <p>{vatNote}</p>
+              <a
+                href={`/contact?segment=${plan.segment}`}
+                className={`mt-6 rounded-full px-5 py-3 text-center text-sm font-semibold transition-colors ${
+                  plan.highlighted
+                    ? "bg-emerald text-cream hover:bg-emerald-dark"
+                    : "border border-ink/15 text-ink hover:border-emerald hover:text-emerald-dark"
+                }`}
+              >
+                Choisir {plan.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {offers.map((offer) => (
+            <li key={offer.id} className="rounded-2xl bg-sand/60 p-5">
+              <h4 className="text-sm font-semibold text-ink">{offer.title}</h4>
+              <p className="mt-1.5 text-xs leading-relaxed text-slate">
+                {offer.body}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-6 text-xs text-slate">{vatNote}</p>
+      </div>
     </section>
   );
 }
