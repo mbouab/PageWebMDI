@@ -5,6 +5,7 @@ import ChatExamples from "@/components/ChatExamples";
 import Clients from "@/components/sections/Clients";
 import Tarifs from "@/components/sections/Tarifs";
 import Faq from "@/components/sections/Faq";
+import ContactCta from "@/components/sections/ContactCta";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Clients />
       <Tarifs />
       <Faq />
+      <ContactCta />
     </main>
   );
 }
