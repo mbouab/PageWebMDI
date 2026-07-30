@@ -2,6 +2,8 @@ import Hero from "@/components/sections/Hero";
 import Valeur from "@/components/sections/Valeur";
 import CommentCaMarche from "@/components/sections/CommentCaMarche";
 import ChatExamples from "@/components/ChatExamples";
+import Clients from "@/components/sections/Clients";
+import Tarifs from "@/components/sections/Tarifs";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Valeur />
       <CommentCaMarche />
       <ChatExamples />
+      <Clients />
+      <Tarifs />
     </main>
   );
 }
