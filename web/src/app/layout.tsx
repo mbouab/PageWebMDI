@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { getStructuredData } from "@/lib/structuredData";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export { metadata } from "./metadata";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
