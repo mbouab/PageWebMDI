@@ -1,0 +1,9 @@
+# Claude Code tooling (local dev environment, not project source)
+.claude/
+.agents/
+.playwright-cli/
+skills-lock.json
+
+# OS cruft
+.DS_Store
+Thumbs.db
