@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { getStructuredData } from "@/lib/structuredData";
+import Nav from "@/components/Nav";
 
 export { metadata } from "./metadata";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Nav />
         {children}
       </body>
     </html>
