@@ -26,3 +26,43 @@ describe("Hero (T-1.1)", () => {
     ).toBeInTheDocument();
   });
 });
+
+describe("Hero (T-2.1)", () => {
+  it("renders the subhead and exactly 2 CTAs from the mocked site config", async () => {
+    const { default: Hero } = await import("@/components/sections/Hero");
+
+    render(<Hero />);
+
+    expect(screen.getByText(mockedSite.hero.subhead)).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: mockedSite.hero.ctaPrimary }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: mockedSite.hero.ctaSecondary }),
+    ).toBeInTheDocument();
+  });
+});
+
+describe("Hero (T-2.2, T-2.3)", () => {
+  it("points the primary CTA to #contact-cta and the secondary CTA to #exemples", async () => {
+    const { default: Hero } = await import("@/components/sections/Hero");
+
+    render(<Hero />);
+
+    expect(
+      screen.getByRole("link", { name: mockedSite.hero.ctaPrimary }),
+    ).toHaveAttribute("href", "#contact-cta");
+    expect(
+      screen.getByRole("link", { name: mockedSite.hero.ctaSecondary }),
+    ).toHaveAttribute("href", "#exemples");
+  });
+});
+
+describe("Hero (T-2.4 target)", () => {
+  it("exposes an id='hero' anchor target for the nav brand link", async () => {
+    const { default: Hero } = await import("@/components/sections/Hero");
+    const { container } = render(<Hero />);
+
+    expect(container.querySelector("#hero")).not.toBeNull();
+  });
+});
