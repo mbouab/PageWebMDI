@@ -1,0 +1,70 @@
+<svg width="460" height="800" viewBox="0 0 460 800" xmlns="http://www.w3.org/2000/svg" font-family="'Inter','Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E9E6A"/>
+      <stop offset="1" stop-color="#157552"/>
+    </linearGradient>
+    <filter id="ph" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#0F2A24" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <!-- phone body -->
+  <rect x="20" y="16" width="420" height="768" rx="46" fill="#0F2A24" filter="url(#ph)"/>
+  <rect x="30" y="26" width="400" height="748" rx="38" fill="#ECE5DD"/>
+
+  <!-- header -->
+  <path d="M30 64 a38 38 0 0 1 38 -38 h324 a38 38 0 0 1 38 38 v40 h-400 z" fill="url(#hg)"/>
+  <rect x="30" y="96" width="400" height="10" fill="url(#hg)"/>
+  <circle cx="86" cy="72" r="22" fill="#FBF8F2"/>
+  <!-- mini mark inside avatar -->
+  <rect x="74" y="72" width="6" height="10" rx="2" fill="#157552"/>
+  <rect x="83" y="66" width="6" height="16" rx="2" fill="#157552"/>
+  <rect x="92" y="60" width="6" height="22" rx="2" fill="#E8A13A"/>
+  <text x="120" y="66" font-size="19" font-weight="700" fill="#FFFFFF">Le Passe</text>
+  <text x="120" y="86" font-size="12.5" fill="#D6F0E4">en ligne · rapport automatique</text>
+
+  <!-- ===== bubble 1: morning report (incoming) ===== -->
+  <g>
+    <rect x="46" y="126" width="320" height="250" rx="18" fill="#FFFFFF"/>
+    <path d="M46 150 l-12 -8 v20 z" fill="#FFFFFF"/>
+    <text x="64" y="156" font-size="14.5" font-weight="700" fill="#0F2A24">☀️ Rapport du jour · Boma Beach</text>
+    <text x="64" y="182" font-size="13.5" fill="#0F2A24">✅ CA hier : <tspan font-weight="700">12,4 k€</tspan>  ·  obj. 11,5 k€ (+7,8%)</text>
+    <text x="64" y="206" font-size="13.5" fill="#0F2A24">🎯 Point mort : <tspan font-weight="700">+3,4 k€</tspan> au-dessus</text>
+    <text x="64" y="230" font-size="13.5" fill="#0F2A24">🥘 Food cost semaine : <tspan font-weight="700">25,8%</tspan> (cible 26%)</text>
+    <text x="64" y="254" font-size="13.5" fill="#0F2A24">👥 Masse salariale : <tspan font-weight="700">33,1%</tspan> ✅</text>
+    <text x="64" y="278" font-size="13.5" fill="#0F2A24">⭐ Avis Google : 4,6/5 (3 nouveaux)</text>
+    <text x="64" y="308" font-size="13.5" fill="#5B6B66">📈 Prévision 7j : week-end chargé,</text>
+    <text x="64" y="328" font-size="13.5" fill="#5B6B66">renfort conseillé vendredi soir.</text>
+    <text x="64" y="356" font-size="11" fill="#9AAAA4">exemple illustratif — données fictives</text>
+    <text x="340" y="368" font-size="10.5" fill="#9AAAA4" text-anchor="end">05:00 ✓✓</text>
+  </g>
+
+  <!-- ===== bubble 2: user question (outgoing) ===== -->
+  <g>
+    <rect x="150" y="400" width="264" height="58" rx="18" fill="#DCF8C6"/>
+    <path d="M414 424 l12 -8 v20 z" fill="#DCF8C6"/>
+    <text x="170" y="432" font-size="13.5" fill="#0F2A24">Quel est le food cost de</text>
+    <text x="170" y="450" font-size="13.5" fill="#0F2A24">L'Uni Vert cette semaine ?</text>
+    <text x="400" y="450" font-size="10.5" fill="#5B8A6E" text-anchor="end">08:12 ✓✓</text>
+  </g>
+
+  <!-- ===== bubble 3: answer (incoming) ===== -->
+  <g>
+    <rect x="46" y="480" width="330" height="150" rx="18" fill="#FFFFFF"/>
+    <path d="M46 504 l-12 -8 v20 z" fill="#FFFFFF"/>
+    <text x="64" y="512" font-size="13.5" fill="#0F2A24">⚠️ Food cost L'Uni Vert :</text>
+    <text x="64" y="536" font-size="16" font-weight="700" fill="#E8A13A">29,4%</text>
+    <text x="120" y="536" font-size="13.5" fill="#0F2A24">— au-dessus de la cible 26%.</text>
+    <text x="64" y="562" font-size="13.5" fill="#0F2A24">Principal écart : poste "Marée"</text>
+    <text x="64" y="584" font-size="13.5" fill="#0F2A24">+18% de prix vs mois dernier.</text>
+    <text x="64" y="612" font-size="11" fill="#9AAAA4">exemple illustratif — données fictives</text>
+    <text x="352" y="622" font-size="10.5" fill="#9AAAA4" text-anchor="end">08:12 ✓✓</text>
+  </g>
+
+  <!-- input bar -->
+  <rect x="46" y="712" width="286" height="44" rx="22" fill="#FFFFFF"/>
+  <text x="66" y="740" font-size="13.5" fill="#9AAAA4">Posez votre question…</text>
+  <circle cx="366" cy="734" r="26" fill="url(#hg)"/>
+  <path d="M354 734 l24 -9 -8 9 8 9 z" fill="#FFFFFF"/>
+</svg>

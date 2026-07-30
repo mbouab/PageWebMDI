@@ -1,0 +1,53 @@
+<svg width="720" height="160" viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .ic  { fill:none; stroke:#157552; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; }
+    .acc { fill:none; stroke:#E8A13A; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; }
+    .lbl { font-family:'Inter','Segoe UI',Arial,sans-serif; font-size:14px; fill:#0F2A24; text-anchor:middle; font-weight:600; }
+    .bg  { fill:#F4EFE6; }
+  </style>
+
+  <!-- 1. Rapport auto -->
+  <g transform="translate(20,10)">
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="24"/>
+    <rect class="ic" x="34" y="26" width="32" height="48" rx="4"/>
+    <line class="ic" x1="42" y1="40" x2="58" y2="40"/>
+    <line class="ic" x1="42" y1="50" x2="58" y2="50"/>
+    <line class="acc" x1="42" y1="60" x2="52" y2="60"/>
+    <text class="lbl" x="50" y="130">Rapport auto</text>
+  </g>
+
+  <!-- 2. Q&A langage naturel -->
+  <g transform="translate(160,10)">
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="24"/>
+    <path class="ic" d="M28 34 h44 a6 6 0 0 1 6 6 v22 a6 6 0 0 1 -6 6 H46 l-12 12 v-12 h-6 a6 6 0 0 1 -6 -6 V40 a6 6 0 0 1 6 -6 z"/>
+    <line class="acc" x1="38" y1="48" x2="62" y2="48"/>
+    <line class="ic"  x1="38" y1="58" x2="54" y2="58"/>
+    <text class="lbl" x="50" y="130">Q&amp;A naturel</text>
+  </g>
+
+  <!-- 3. WhatsApp / mobile -->
+  <g transform="translate(300,10)">
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="24"/>
+    <rect class="ic" x="36" y="24" width="28" height="52" rx="7"/>
+    <line class="ic" x1="46" y1="68" x2="54" y2="68"/>
+    <circle class="acc" cx="50" cy="46" r="9"/>
+    <text class="lbl" x="50" y="130">Sur WhatsApp</text>
+  </g>
+
+  <!-- 4. Prévision -->
+  <g transform="translate(440,10)">
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="24"/>
+    <polyline class="ic" points="28,68 42,54 52,60 72,34"/>
+    <polyline class="acc" points="64,34 72,34 72,42"/>
+    <line class="ic" x1="28" y1="76" x2="74" y2="76"/>
+    <text class="lbl" x="50" y="130">Prévisions</text>
+  </g>
+
+  <!-- 5. Fiabilité / source -->
+  <g transform="translate(580,10)">
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="24"/>
+    <path class="ic" d="M50 24 l22 9 v14 c0 16 -12 27 -22 31 c-10 -4 -22 -15 -22 -31 V33 z"/>
+    <polyline class="acc" points="40,50 48,58 62,42"/>
+    <text class="lbl" x="50" y="130">Traçable</text>
+  </g>
+</svg>

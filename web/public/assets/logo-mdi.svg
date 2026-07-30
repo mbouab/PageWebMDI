@@ -1,0 +1,20 @@
+<svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E9E6A"/>
+      <stop offset="1" stop-color="#157552"/>
+    </linearGradient>
+  </defs>
+  <!-- mark -->
+  <g transform="translate(20,36)">
+    <rect x="0" y="0" width="128" height="128" rx="30" fill="url(#lg)"/>
+    <circle cx="64" cy="64" r="41" fill="none" stroke="#FBF8F2" stroke-width="5" opacity="0.35"/>
+    <rect x="48"  y="66" width="8"  height="17" rx="3" fill="#FBF8F2"/>
+    <rect x="60"  y="57" width="8"  height="26" rx="3" fill="#FBF8F2"/>
+    <rect x="72"  y="45" width="8"  height="38" rx="3" fill="#E8A13A"/>
+    <circle cx="76" cy="39" r="4" fill="#E8A13A"/>
+  </g>
+  <!-- wordmark -->
+  <text x="176" y="98" font-family="'Space Grotesk','Segoe UI',Arial,sans-serif" font-size="66" font-weight="700" fill="#0F2A24" letter-spacing="1">MDI</text>
+  <text x="178" y="138" font-family="'Inter','Segoe UI',Arial,sans-serif" font-size="21" font-weight="500" fill="#5B6B66" letter-spacing="0.5">Management Data Innovation</text>
+</svg>
