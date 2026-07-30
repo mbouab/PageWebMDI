@@ -76,6 +76,15 @@ describe("contactSchema (T-7.5)", () => {
 
     expect(result.success).toBe(true);
   });
+
+  it("treats an empty-string nbEtablissements (as sent by an untouched number input) as absent, not 0", () => {
+    const result = contactSchema.safeParse({
+      ...validPayload,
+      nbEtablissements: "",
+    });
+
+    expect(result.success).toBe(true);
+  });
 });
 
 describe("contactSchema (T-7.6)", () => {
