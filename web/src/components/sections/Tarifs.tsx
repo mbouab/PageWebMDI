@@ -6,7 +6,7 @@ import { site } from "@/config/site";
 
 export default function Tarifs() {
   const [isAnnual, setIsAnnual] = useState(false);
-  const { founding, annual, plans, offers, vatNote } = site.pricing;
+  const { annual, plans, offers, vatNote } = site.pricing;
   const monthsBilled = 12 - annual.monthsFree;
 
   return (
@@ -47,15 +47,6 @@ export default function Tarifs() {
               Annuel ({annual.savingsPct} % d&apos;économie)
             </button>
           </div>
-
-          {founding.spotsLeft > 0 && (
-            <p
-              role="status"
-              className="rounded-full bg-amber/15 px-4 py-2 text-sm font-semibold text-amber"
-            >
-              {founding.label} — {founding.spotsLeft} places restantes
-            </p>
-          )}
         </div>
 
         <ul className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -76,19 +67,16 @@ export default function Tarifs() {
               <h3 className="text-xl font-semibold text-ink">{plan.name}</h3>
               <p className="mt-1 text-sm text-slate">{plan.target}</p>
 
-              {plan.foundingMonthly === null || plan.catalogMonthly === null ? (
+              {plan.catalogMonthly === null ? (
                 <p className="mt-5 font-mono text-3xl font-semibold text-ink">
                   Sur devis
                 </p>
               ) : (
                 <div className="mt-5">
-                  <span className="font-mono text-sm text-slate line-through">
-                    {plan.catalogMonthly} €
-                  </span>
                   <p className="font-mono text-3xl font-semibold text-emerald-dark">
                     {isAnnual
-                      ? `${plan.foundingMonthly * monthsBilled} €`
-                      : `${plan.foundingMonthly} €`}
+                      ? `${plan.catalogMonthly * monthsBilled} €`
+                      : `${plan.catalogMonthly} €`}
                     <span className="ml-1 text-sm font-normal text-slate">
                       {isAnnual ? "/ an" : plan.unit}
                     </span>

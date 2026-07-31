@@ -7,13 +7,6 @@ const mockedSite = {
   pricing: {
     currency: "EUR",
     vatNote: "Mention TVA/HT mockée.",
-    founding: {
-      label: "Membres fondateurs",
-      discountPct: 30,
-      totalSpots: 5,
-      spotsLeft: 3,
-      note: "−30 % à vie.",
-    },
     annual: { monthsFree: 2, savingsPct: 17 },
     plans: [
       {
@@ -22,7 +15,6 @@ const mockedSite = {
         name: "Solo",
         target: "1 restaurant",
         catalogMonthly: 111,
-        foundingMonthly: 77,
         unit: "par mois",
         anchorLine: "Ligne d'ancrage Solo mockée",
         highlighted: false,
@@ -34,7 +26,6 @@ const mockedSite = {
         name: "Groupe",
         target: "2 à 5 restaurants",
         catalogMonthly: 222,
-        foundingMonthly: 88,
         unit: "par restaurant / mois",
         anchorLine: "Ligne d'ancrage Groupe mockée",
         highlighted: true,
@@ -47,7 +38,6 @@ const mockedSite = {
         name: "Réseau",
         target: "6+ restaurants / franchise",
         catalogMonthly: null,
-        foundingMonthly: null,
         unit: "sur devis",
         anchorLine: "Ligne d'ancrage Réseau mockée",
         highlighted: false,
@@ -55,7 +45,6 @@ const mockedSite = {
       },
     ],
     offers: [
-      { id: "founding", title: "Offre fondateurs mockée", body: "Corps 1" },
       { id: "setup", title: "Offre setup mockée", body: "Corps 2" },
       { id: "pilot", title: "Offre pilote mockée", body: "Corps 3" },
       { id: "annual", title: "Offre annuelle mockée", body: "Corps 4" },
@@ -72,10 +61,10 @@ describe("Tarifs (T-1.2)", () => {
 
     render(<Tarifs />);
 
-    expect(screen.getByText(/77/)).toBeInTheDocument();
-    expect(screen.getByText(/88/)).toBeInTheDocument();
+    expect(screen.getByText(/111/)).toBeInTheDocument();
+    expect(screen.getByText(/222/)).toBeInTheDocument();
     expect(screen.queryByText(/490/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/343/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/390/)).not.toBeInTheDocument();
   });
 });
 
@@ -129,7 +118,7 @@ describe("Tarifs (T-5.4)", () => {
   });
 });
 
-describe("Tarifs (pricing anchor & founding rarity banner)", () => {
+describe("Tarifs (pricing anchor)", () => {
   it("shows the pricing anchor line above the cards", async () => {
     const { default: Tarifs } = await import("@/components/sections/Tarifs");
 
@@ -138,12 +127,12 @@ describe("Tarifs (pricing anchor & founding rarity banner)", () => {
     expect(screen.getByText(mockedSite.pricingAnchor)).toBeInTheDocument();
   });
 
-  it("shows the founding rarity banner with the remaining spots count", async () => {
+  it("does not show a founding-discount rarity banner", async () => {
     const { default: Tarifs } = await import("@/components/sections/Tarifs");
 
     render(<Tarifs />);
 
-    expect(screen.getByText(/3 places restantes/i)).toBeInTheDocument();
+    expect(screen.queryByText(/places restantes/i)).not.toBeInTheDocument();
   });
 });
 
@@ -164,13 +153,13 @@ describe("Tarifs (monthly/annual toggle)", () => {
 
     render(<Tarifs />);
 
-    // 77 €/mois by default (Solo founding price).
-    expect(screen.getByText(/77 €/)).toBeInTheDocument();
+    // 111 €/mois by default (Solo catalog price).
+    expect(screen.getByText(/111 €/)).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: /annuel/i }));
 
-    // 10 months billed out of 12 (2 offered) => 77 * 10 = 770.
-    expect(screen.getByText(/770 €/)).toBeInTheDocument();
+    // 10 months billed out of 12 (2 offered) => 111 * 10 = 1110.
+    expect(screen.getByText(/1110 €/)).toBeInTheDocument();
   });
 });
 

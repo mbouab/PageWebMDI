@@ -30,17 +30,14 @@ describe("site.ts (config foundation)", () => {
     const reseau = site.pricing.plans.find((p) => p.id === "reseau");
 
     expect(reseau?.catalogMonthly).toBeNull();
-    expect(reseau?.foundingMonthly).toBeNull();
   });
 
-  it("prices Solo and Groupe with a catalogue and a founding (discounted) amount", () => {
-    for (const id of ["solo", "groupe"]) {
-      const plan = site.pricing.plans.find((p) => p.id === id);
+  it("prices Solo at 490 €/mois and Groupe at 390 €/restaurant/mois, with no discount", () => {
+    const solo = site.pricing.plans.find((p) => p.id === "solo");
+    const groupe = site.pricing.plans.find((p) => p.id === "groupe");
 
-      expect(typeof plan?.catalogMonthly).toBe("number");
-      expect(typeof plan?.foundingMonthly).toBe("number");
-      expect(plan?.foundingMonthly).toBeLessThan(plan!.catalogMonthly!);
-    }
+    expect(solo?.catalogMonthly).toBe(490);
+    expect(groupe?.catalogMonthly).toBe(390);
   });
 
   it("provides both a named and an anonymous client list (showClientNames toggle, T-1.3)", () => {

@@ -34,15 +34,6 @@ export const site = {
     vatNote:
       "Tarifs HT. TVA applicable selon localisation (ex. 8,5 % à La Réunion).",
 
-    /** Réduction fondateurs, appliquée « à vie » aux premiers clients. */
-    founding: {
-      label: "Membres fondateurs",
-      discountPct: 30,
-      totalSpots: 5,
-      spotsLeft: 3, // met à 0 pour masquer le bandeau de rareté
-      note: "−30 % à vie, tant que vous restez abonné.",
-    },
-
     /** Annuel = 2 mois offerts (≈ −17 %). Piloté par le toggle Mensuel/Annuel. */
     annual: { monthsFree: 2, savingsPct: 17 },
 
@@ -53,7 +44,6 @@ export const site = {
         name: "Solo",
         target: "1 restaurant",
         catalogMonthly: 490, // € HT / mois
-        foundingMonthly: 343, // € HT / mois (−30 %, à vie)
         setupFee: 990, // € HT (offerte au lancement)
         setupWaivedAtLaunch: true,
         unit: "par mois",
@@ -72,7 +62,6 @@ export const site = {
         name: "Groupe",
         target: "2 à 5 restaurants",
         catalogMonthly: 390, // € HT / mois / restaurant
-        foundingMonthly: 273, // € HT / mois / restaurant (−30 %, à vie)
         setupFee: 1490,
         setupWaivedAtLaunch: true,
         unit: "par restaurant / mois",
@@ -92,7 +81,6 @@ export const site = {
         name: "Réseau",
         target: "6+ restaurants / franchise",
         catalogMonthly: null, // → « Sur devis »
-        foundingMonthly: null,
         setupFee: null,
         setupWaivedAtLaunch: false,
         unit: "sur devis",
@@ -109,11 +97,6 @@ export const site = {
 
     /** Offres de lancement listées sous les cartes (bloc « arguments »). */
     offers: [
-      {
-        id: "founding",
-        title: "Membres fondateurs — 5 places",
-        body: "Les 5 premiers clients bénéficient de −30 % à vie, tant qu'ils restent abonnés.",
-      },
       {
         id: "setup",
         title: "Mise en service offerte",

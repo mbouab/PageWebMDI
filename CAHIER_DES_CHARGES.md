@@ -171,33 +171,25 @@ Format : logos/cartes + une phrase de contexte + (optionnel) 1 verbatim/citation
 > d'euros par mois.
 
 **Toggle Mensuel / Annuel** en haut de la section (annuel = 2 mois offerts).
-**Bandeau de rareté** au-dessus des cartes quand `pricing.founding.spotsLeft > 0` :
-« Offre fondateurs — {spotsLeft} places restantes ». Masqué si `spotsLeft = 0`.
 
-Chaque carte affiche : tarif **catalogue barré** + **tarif de lancement** mis en avant,
+Chaque carte affiche : le tarif catalogue mis en avant (aucune réduction affichée),
 et une ligne d'ancrage « ≈ 6× moins cher qu'un contrôleur de gestion à temps partiel ».
 L'offre **Groupe** est mise en avant (badge « La plus choisie », bordure `emerald`).
 
-| Offre | Cible | Catalogue HT | Lancement fondateurs (−30 % à vie) | Mise en service |
-|---|---|---|---|---|
-| **Solo** | 1 restaurant | 490 €/mois | **343 €/mois à vie** | 990 € (offerte au lancement) |
-| **Groupe** ⭐ | 2 à 5 restaurants | 390 €/restaurant/mois | **273 €/restaurant/mois** | 1 490 € (offerte au lancement) |
-| **Réseau** | 6+ / franchise | Sur devis (dégressif volume) | Sur devis | Sur devis |
+| Offre | Cible | Tarif HT | Mise en service |
+|---|---|---|---|
+| **Solo** | 1 restaurant | 490 €/mois | 990 € (offerte au lancement) |
+| **Groupe** ⭐ | 2 à 5 restaurants | 390 €/restaurant/mois | 1 490 € (offerte au lancement) |
+| **Réseau** | 6+ / franchise | Sur devis (dégressif volume) | Sur devis |
 
 **Offres de lancement à afficher** (objet `pricing.offers` dans `site.ts`) :
-1. **Membres fondateurs** : les 5 premiers clients, **−30 % à vie** (tant qu'abonnés). Rareté + urgence.
-2. **Mise en service offerte** au lancement (valeur 990–1 490 €).
-3. **Pilote 30 jours** satisfait ou remboursé.
-4. **Paiement annuel** : 2 mois offerts (≈ −17 %).
-5. **Parrainage** : 1 mois offert par client parrainé qui signe.
+1. **Mise en service offerte** au lancement (valeur 990–1 490 €).
+2. **Pilote 30 jours** satisfait ou remboursé.
+3. **Paiement annuel** : 2 mois offerts (≈ −17 %).
+4. **Parrainage** : 1 mois offert par client parrainé qui signe.
 
 Mentions : « Tarifs HT. TVA applicable selon localisation (ex. 8,5 % à La Réunion). »
 CTA de chaque offre → `#contact-cta` avec pré-remplissage du `segment` dans le formulaire.
-
-> ⚠️ **Garde-fou (note interne, ne pas afficher)** : le tarif fondateur (343 € net Solo)
-> doit couvrir coûts API Anthropic + serveur + temps, avec marge. Trivial à justifier
-> sur un gros site (Boma, 2,7 M€ de CA) ; c'est l'offre de lancement qui fait passer le
-> prix chez un petit indépendant.
 
 ### 5.7 FAQ (`#faq`)
 Accordéon. Questions minimales :
@@ -472,7 +464,7 @@ Lighthouse ≥ 90 sur les 4 axes (mobile), et le déploiement Vercel de preview 
 ## 15. Points à confirmer par Mehdi (à ne pas inventer)
 
 - [x] **Nom produit** : « Le Passe » (baseline « le pilotage de votre restaurant »). Confirmé — modifiable via `PRODUCT_NAME`.
-- [x] **Prix** définis (Solo 490 €/343 € fondateur, Groupe 390 €/273 € fondateur, Réseau sur devis) — voir §5.6 et `site.ts`.
+- [x] **Prix** définis (Solo 490 €, Groupe 390 €/restaurant, sans réduction fondateur ; Réseau sur devis) — voir §5.6 et `site.ts`.
 - [ ] **Accord des clients** pour citation nominative (Boma Beach / L'Uni Vert, verbatims).
 - [ ] **Coordonnées** : email de contact, téléphone, adresse société, SIRET (mentions légales).
 - [ ] **Conditions commerciales** : engagement / résiliation à afficher.
