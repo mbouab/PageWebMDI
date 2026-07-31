@@ -19,6 +19,6 @@ export const piliers = [
 export const benefits = [
   "Rapport prêt avant l'ouverture (livraison 5 h 00, heure locale).",
   "Zéro tableau de bord à consulter : l'information vient à vous.",
-  "Chaque chiffre est traçable à sa source (aucune estimation « à la louche »).",
+  "Chaque chiffre est traçable à sa source (aucune estimation « à la louche »).",
   "Décisions de staffing pilotées par la demande (prévision de CA à 10 jours).",
 ];

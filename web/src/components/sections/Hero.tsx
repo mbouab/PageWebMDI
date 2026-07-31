@@ -9,9 +9,19 @@ export default function Hero() {
       className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-16 sm:px-6 sm:pt-14 sm:pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-10 lg:pt-20"
     >
       <div>
-        <p className="inline-flex items-center gap-2 rounded-full bg-emerald/10 px-3 py-1 text-sm font-semibold text-emerald-dark">
-          {site.productName}
-        </p>
+        <div className="flex items-center gap-3">
+          <p className="inline-flex items-center gap-2 rounded-full bg-emerald/10 px-3 py-1 text-sm font-semibold text-emerald-dark">
+            {site.productName}
+          </p>
+          <Image
+            src="/assets/mdi-service-table.svg"
+            alt=""
+            aria-hidden="true"
+            width={40}
+            height={32}
+            className="hidden sm:block"
+          />
+        </div>
         <h1
           id="hero-heading"
           className="mt-5 text-4xl leading-[1.08] font-bold text-ink sm:text-5xl lg:text-[3.25rem]"

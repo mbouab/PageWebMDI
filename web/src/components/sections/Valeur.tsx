@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCheck } from "lucide-react";
 import { piliers, benefits } from "@/content/valeur";
 
@@ -5,12 +6,22 @@ export default function Valeur() {
   return (
     <section id="valeur" aria-labelledby="valeur-heading" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-        <h2
-          id="valeur-heading"
-          className="max-w-2xl text-3xl font-bold text-ink sm:text-4xl"
-        >
-          Ce qui change dès demain matin
-        </h2>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/assets/mdi-couverts.svg"
+            alt=""
+            aria-hidden="true"
+            width={40}
+            height={40}
+            className="hidden sm:block"
+          />
+          <h2
+            id="valeur-heading"
+            className="max-w-2xl text-3xl font-bold text-ink sm:text-4xl"
+          >
+            Ce qui change dès demain matin
+          </h2>
+        </div>
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-3">
           {piliers.map((pilier) => (

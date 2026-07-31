@@ -1,7 +1,8 @@
 export const etapes = [
   {
     title: "On connecte vos outils",
-    description: "Caisse (Clyo), RH (Skello), achats, avis (Google), météo.",
+    description:
+      "Caisse (ex. Clyo), RH (ex. Skello), achats, avis (Google), météo, etc.",
   },
   {
     title: "On centralise & fiabilise",

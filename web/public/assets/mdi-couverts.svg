@@ -1,0 +1,25 @@
+<svg width="440" height="440" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fourchette et couteau croises" style="color:#1F6E4C">
+  <g stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- fourchette (inclinee gauche) -->
+    <g transform="rotate(-18 210 220)">
+      <!-- dents -->
+      <line x1="176" y1="70" x2="176" y2="118"/>
+      <line x1="198" y1="70" x2="198" y2="122"/>
+      <line x1="220" y1="70" x2="220" y2="122"/>
+      <line x1="242" y1="70" x2="242" y2="118"/>
+      <!-- collet -->
+      <path d="M176 118 q0 26 22 30 q22 -4 22 -30" />
+      <path d="M242 118 q0 26 -22 30" />
+      <!-- manche -->
+      <line x1="209" y1="150" x2="209" y2="360"/>
+    </g>
+    <!-- couteau (incline droite) -->
+    <g transform="rotate(18 232 220)">
+      <!-- lame -->
+      <path d="M250 70 q22 6 22 60 l0 40 q-22 6 -22 -6 Z" fill="currentColor" fill-opacity="0.12"/>
+      <path d="M250 66 v104" />
+      <!-- manche -->
+      <line x1="250" y1="170" x2="250" y2="360"/>
+    </g>
+  </g>
+</svg>

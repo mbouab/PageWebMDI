@@ -114,7 +114,7 @@ Sections ancrées de la landing (ordre imposé) :
 
 ### 5.3 Comment ça marche (`#comment-ca-marche`)
 Timeline en 4 étapes :
-1. **On connecte vos outils** — caisse (Clyo), RH (Skello), achats, avis (Google), météo.
+1. **On connecte vos outils** — caisse (ex. Clyo), RH (ex. Skello), achats, avis (Google), météo, etc.
 2. **On centralise & fiabilise** — entrepôt de données, règles métier de votre secteur.
 3. **Des agents IA analysent** — CA, RH, achats, réputation, prévisions.
 4. **Vous recevez & questionnez sur WhatsApp** — rapport auto + Q&A en langage naturel.
@@ -153,7 +153,7 @@ la mention « exemple illustratif ».)*
 Mettre en avant **Groupe Abondance** (holding, île de La Réunion) et ses deux
 établissements :
 - **Boma Beach** — Boucan Canot, La Réunion.
-- **L'Uni Vert** — La Réunion.
+- **l'Univert Plage** — La Réunion.
 
 Format : logos/cartes + une phrase de contexte + (optionnel) 1 verbatim/citation.
 > ⚠️ **À valider avec Mehdi** : accord des clients pour être cités nommément,
@@ -183,10 +183,10 @@ L'offre **Groupe** est mise en avant (badge « La plus choisie », bordure `emer
 | **Réseau** | 6+ / franchise | Sur devis (dégressif volume) | Sur devis |
 
 **Offres de lancement à afficher** (objet `pricing.offers` dans `site.ts`) :
-1. **Mise en service offerte** au lancement (valeur 990–1 490 €).
+1. **Mise en service offerte** pour toute signature avant le 31 décembre 2026 (valeur 990–1 490 €).
 2. **Pilote 30 jours** satisfait ou remboursé.
 3. **Paiement annuel** : 2 mois offerts (≈ −17 %).
-4. **Parrainage** : 1 mois offert par client parrainé qui signe.
+4. **Parrainage** : 1 mois offert au nouveau client parrainé, dès sa signature.
 
 Mentions : « Tarifs HT. TVA applicable selon localisation (ex. 8,5 % à La Réunion). »
 CTA de chaque offre → `#contact-cta` avec pré-remplissage du `segment` dans le formulaire.

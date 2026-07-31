@@ -1,0 +1,58 @@
+<svg width="440" height="440" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plat gastronomique vue de dessus">
+  <!-- ombre portee -->
+  <ellipse cx="222" cy="238" rx="176" ry="172" fill="#E7DFCF" opacity="0.55"/>
+  <!-- rebord assiette -->
+  <circle cx="220" cy="220" r="176" fill="#FBF8F1"/>
+  <circle cx="220" cy="220" r="176" fill="none" stroke="#EAE1CE" stroke-width="2"/>
+  <circle cx="220" cy="220" r="150" fill="#FDFCF8"/>
+  <circle cx="220" cy="220" r="150" fill="none" stroke="#E4DAC5" stroke-width="1.5"/>
+  <!-- creux assiette -->
+  <circle cx="220" cy="220" r="120" fill="#F6F1E6"/>
+  <circle cx="220" cy="220" r="120" fill="none" stroke="#E0D5BE" stroke-width="1"/>
+
+  <!-- swoosh de sauce herbes -->
+  <path d="M120 260 C150 300, 250 300, 320 250 C300 268, 200 292, 150 268 Z" fill="#3F7A4E" opacity="0.9"/>
+  <path d="M124 258 C170 288, 260 286, 314 250" stroke="#2F5F3C" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- points de puree safran -->
+  <circle cx="150" cy="182" r="13" fill="#E8B04B"/>
+  <circle cx="150" cy="182" r="13" fill="none" stroke="#D69A2E" stroke-width="1.5"/>
+  <circle cx="298" cy="196" r="10" fill="#E8B04B"/>
+  <circle cx="298" cy="196" r="10" fill="none" stroke="#D69A2E" stroke-width="1.5"/>
+
+  <!-- piece protein saumon saisi -->
+  <g transform="rotate(-16 220 208)">
+    <rect x="168" y="176" width="104" height="66" rx="18" fill="#D98C5F"/>
+    <rect x="168" y="176" width="104" height="66" rx="18" fill="none" stroke="#B96A3F" stroke-width="2"/>
+    <!-- peau croustillante -->
+    <path d="M168 200 q52 -20 104 0 v-6 a18 18 0 0 0 -18 -18 h-68 a18 18 0 0 0 -18 18 Z" fill="#C97B54"/>
+    <!-- marques de grill -->
+    <line x1="190" y1="182" x2="176" y2="236" stroke="#8A4B32" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <line x1="220" y1="180" x2="212" y2="240" stroke="#8A4B32" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <line x1="250" y1="182" x2="248" y2="238" stroke="#8A4B32" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- micro pousses / herbes -->
+  <g stroke="#4E8B54" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M232 150 q-6 -14 -16 -18"/>
+    <path d="M232 150 q6 -12 18 -14"/>
+    <path d="M232 150 q0 -16 2 -22"/>
+  </g>
+  <circle cx="214" cy="132" r="4" fill="#6FA96A"/>
+  <circle cx="250" cy="136" r="4" fill="#6FA96A"/>
+  <circle cx="234" cy="128" r="4" fill="#6FA96A"/>
+
+  <!-- quartier de citron -->
+  <g transform="rotate(20 300 270)">
+    <path d="M282 262 a20 20 0 0 1 36 0 Z" fill="#F2C94C"/>
+    <path d="M282 262 a20 20 0 0 1 36 0 Z" fill="none" stroke="#D9A93A" stroke-width="2"/>
+    <line x1="300" y1="262" x2="300" y2="250" stroke="#FBF3D0" stroke-width="2"/>
+    <line x1="300" y1="262" x2="290" y2="256" stroke="#FBF3D0" stroke-width="1.5"/>
+    <line x1="300" y1="262" x2="310" y2="256" stroke="#FBF3D0" stroke-width="1.5"/>
+  </g>
+
+  <!-- filet d'huile / points -->
+  <circle cx="176" cy="272" r="4" fill="#E8B04B" opacity="0.85"/>
+  <circle cx="196" cy="284" r="3" fill="#E8B04B" opacity="0.85"/>
+  <circle cx="270" cy="278" r="4" fill="#E8B04B" opacity="0.85"/>
+</svg>

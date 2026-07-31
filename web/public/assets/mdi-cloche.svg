@@ -1,0 +1,33 @@
+<svg width="440" height="360" viewBox="0 0 440 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloche de service qui se souleve" style="color:#1F6E4C">
+  <!-- assiette dessous -->
+  <ellipse cx="220" cy="288" rx="150" ry="26" fill="currentColor" fill-opacity="0.10"/>
+  <ellipse cx="220" cy="284" rx="150" ry="24" fill="none" stroke="currentColor" stroke-width="6"/>
+  <ellipse cx="220" cy="278" rx="110" ry="16" fill="none" stroke="currentColor" stroke-width="4" opacity="0.5"/>
+
+  <!-- vapeur qui s'echappe -->
+  <g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M190 226 q14 -16 0 -32 q-14 -16 0 -32"/>
+    <path d="M250 226 q14 -16 0 -32 q-14 -16 0 -32"/>
+  </g>
+
+  <!-- cloche soulevee -->
+  <g stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M108 176 a112 96 0 0 1 224 0 Z" fill="currentColor" fill-opacity="0.08"/>
+    <path d="M104 176 h232" />
+    <!-- pommeau -->
+    <line x1="220" y1="80" x2="220" y2="62"/>
+    <circle cx="220" cy="52" r="12" fill="currentColor" fill-opacity="0.12"/>
+    <!-- reflet -->
+    <path d="M160 150 a70 60 0 0 1 40 -46" opacity="0.5"/>
+  </g>
+
+  <!-- eclat -->
+  <g stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="356" y1="70" x2="356" y2="92"/>
+    <line x1="345" y1="81" x2="367" y2="81"/>
+  </g>
+  <g stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <line x1="78" y1="120" x2="78" y2="136"/>
+    <line x1="70" y1="128" x2="86" y2="128"/>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="440" height="440" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bol de plat chaud avec vapeur">
+  <!-- vapeur -->
+  <g stroke="#B9C9B4" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.7">
+    <path d="M172 150 q16 -20 0 -40 q-16 -20 0 -40"/>
+    <path d="M220 138 q16 -22 0 -44 q-16 -22 0 -44"/>
+    <path d="M268 150 q16 -20 0 -40 q-16 -20 0 -40"/>
+  </g>
+
+  <!-- ombre -->
+  <ellipse cx="222" cy="352" rx="150" ry="26" fill="#E7DFCF" opacity="0.6"/>
+
+  <!-- bol -->
+  <path d="M78 232 h284 a20 20 0 0 1 20 20 c0 62 -70 112 -162 112 s-162 -50 -162 -112 a20 20 0 0 1 20 -20 Z" fill="#F1EBDD"/>
+  <path d="M78 232 h284 a20 20 0 0 1 20 20 c0 62 -70 112 -162 112 s-162 -50 -162 -112 a20 20 0 0 1 20 -20 Z" fill="none" stroke="#DCCFB4" stroke-width="3"/>
+  <path d="M96 260 c26 30 224 30 250 0" stroke="#D8CAAE" stroke-width="2" fill="none" opacity="0.7"/>
+
+  <!-- contenu du bol -->
+  <ellipse cx="220" cy="232" rx="150" ry="40" fill="#3F7A4E"/>
+  <ellipse cx="220" cy="230" rx="150" ry="38" fill="#4C8C58"/>
+
+  <!-- garnitures : protein, oeuf, herbes -->
+  <ellipse cx="180" cy="224" rx="34" ry="18" fill="#D98C5F"/>
+  <ellipse cx="180" cy="222" rx="34" ry="17" fill="none" stroke="#B96A3F" stroke-width="2"/>
+  <line x1="164" y1="216" x2="196" y2="216" stroke="#8A4B32" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="164" y1="228" x2="196" y2="228" stroke="#8A4B32" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- oeuf mollet -->
+  <ellipse cx="262" cy="228" rx="24" ry="15" fill="#FBF6E6"/>
+  <ellipse cx="262" cy="228" rx="24" ry="15" fill="none" stroke="#E9DCB8" stroke-width="2"/>
+  <circle cx="262" cy="228" r="8" fill="#E8B04B"/>
+
+  <!-- herbes / oignon vert -->
+  <g stroke="#8FC98A" stroke-width="4" stroke-linecap="round">
+    <line x1="212" y1="220" x2="228" y2="212"/>
+    <line x1="230" y1="222" x2="246" y2="214"/>
+    <line x1="198" y1="238" x2="214" y2="244"/>
+  </g>
+  <circle cx="150" cy="238" r="5" fill="#E8B04B"/>
+  <circle cx="292" cy="238" r="5" fill="#E8B04B"/>
+
+  <!-- baguettes -->
+  <g stroke="#B98A55" stroke-width="6" stroke-linecap="round">
+    <line x1="300" y1="150" x2="356" y2="264"/>
+    <line x1="322" y1="146" x2="368" y2="262"/>
+  </g>
+</svg>

@@ -1,8 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { Check } from "lucide-react";
+import Image from "next/image";
+import {
+  Check,
+  Wrench,
+  ShieldCheck,
+  CalendarCheck,
+  Users,
+} from "lucide-react";
 import { site } from "@/config/site";
+
+const OFFER_ICONS: Record<string, typeof Wrench> = {
+  setup: Wrench,
+  pilot: ShieldCheck,
+  annual: CalendarCheck,
+  referral: Users,
+};
 
 export default function Tarifs() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -12,12 +26,22 @@ export default function Tarifs() {
   return (
     <section id="tarifs" aria-labelledby="tarifs-heading" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-        <h2
-          id="tarifs-heading"
-          className="max-w-2xl text-3xl font-bold text-ink sm:text-4xl"
-        >
-          Tarifs
-        </h2>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/assets/mdi-cloche.svg"
+            alt=""
+            aria-hidden="true"
+            width={44}
+            height={36}
+            className="hidden sm:block"
+          />
+          <h2
+            id="tarifs-heading"
+            className="max-w-2xl text-3xl font-bold text-ink sm:text-4xl"
+          >
+            Tarifs
+          </h2>
+        </div>
         <p className="mt-3 max-w-2xl text-slate">{site.pricingAnchor}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -114,15 +138,24 @@ export default function Tarifs() {
           ))}
         </ul>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {offers.map((offer) => (
-            <li key={offer.id} className="rounded-2xl bg-sand/60 p-5">
-              <h4 className="text-sm font-semibold text-ink">{offer.title}</h4>
-              <p className="mt-1.5 text-xs leading-relaxed text-slate">
-                {offer.body}
-              </p>
-            </li>
-          ))}
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {offers.map((offer) => {
+            const Icon = OFFER_ICONS[offer.id] ?? Check;
+            return (
+              <li key={offer.id} className="rounded-2xl bg-sand/60 p-5">
+                <Icon
+                  aria-hidden="true"
+                  className="h-5 w-5 text-amber"
+                />
+                <h4 className="mt-2 text-sm font-semibold text-ink">
+                  {offer.title}
+                </h4>
+                <p className="mt-1.5 text-xs leading-relaxed text-slate">
+                  {offer.body}
+                </p>
+              </li>
+            );
+          })}
         </ul>
 
         <p className="mt-6 text-xs text-slate">{vatNote}</p>

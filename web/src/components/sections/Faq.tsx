@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Plus } from "lucide-react";
 import { faqItems } from "@/content/faq";
 
@@ -10,12 +11,22 @@ export default function Faq() {
   return (
     <section id="faq" aria-labelledby="faq-heading" className="py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-10">
-        <h2
-          id="faq-heading"
-          className="text-3xl font-bold text-ink sm:text-4xl"
-        >
-          FAQ
-        </h2>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/assets/mdi-bol-vapeur.svg"
+            alt=""
+            aria-hidden="true"
+            width={40}
+            height={40}
+            className="hidden sm:block"
+          />
+          <h2
+            id="faq-heading"
+            className="text-3xl font-bold text-ink sm:text-4xl"
+          >
+            FAQ
+          </h2>
+        </div>
 
         <dl className="mt-8 divide-y divide-ink/10 border-t border-b border-ink/10">
           {faqItems.map((item) => {

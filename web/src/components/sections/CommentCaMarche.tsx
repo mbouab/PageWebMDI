@@ -1,4 +1,8 @@
+import { Plug, Database, Sparkles, MessageCircle } from "lucide-react";
 import { etapes } from "@/content/commentCaMarche";
+
+const ETAPE_ICONS = [Plug, Database, Sparkles, MessageCircle];
+const ETAPE_ICON_COLORS = ["text-emerald", "text-amber", "text-emerald", "text-amber"];
 
 export default function CommentCaMarche() {
   return (
@@ -16,22 +20,31 @@ export default function CommentCaMarche() {
         </h2>
 
         <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {etapes.map((etape, index) => (
-            <li key={etape.title} className="relative pl-14 sm:pl-0">
-              <span
-                aria-hidden="true"
-                className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-full bg-emerald font-mono text-sm font-semibold text-cream sm:static sm:mb-4"
-              >
-                {index + 1}
-              </span>
-              <h3 className="text-base font-semibold text-ink">
-                {etape.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-slate">
-                {etape.description}
-              </p>
-            </li>
-          ))}
+          {etapes.map((etape, index) => {
+            const Icon = ETAPE_ICONS[index];
+            return (
+              <li key={etape.title} className="relative pl-14 sm:pl-0">
+                <span
+                  aria-hidden="true"
+                  className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-full bg-emerald font-mono text-sm font-semibold text-cream sm:static sm:mb-4"
+                >
+                  {index + 1}
+                </span>
+                {Icon && (
+                  <Icon
+                    aria-hidden="true"
+                    className={`mb-2 h-5 w-5 ${ETAPE_ICON_COLORS[index]}`}
+                  />
+                )}
+                <h3 className="text-base font-semibold text-ink">
+                  {etape.title}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-slate">
+                  {etape.description}
+                </p>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>

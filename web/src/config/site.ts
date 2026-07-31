@@ -9,7 +9,7 @@ export const PRODUCT_TAGLINE = "le pilotage de votre restaurant";
 export const COMPANY_NAME = "MDI — Management Data Innovation";
 
 /** Bascule la section Clients en version anonymisée tant que l'accord de
- *  citation nominative (Boma Beach / L'Uni Vert) n'est pas obtenu. */
+ *  citation nominative (Boma Beach / l'Univert Plage) n'est pas obtenu. */
 export const showClientNames = true; // ⚠️ À CONFIRMER avec les clients
 
 export const site = {
@@ -100,7 +100,7 @@ export const site = {
       {
         id: "setup",
         title: "Mise en service offerte",
-        body: "Frais d'installation offerts au lancement (valeur 990 à 1 490 €).",
+        body: "Frais d'installation offerts pour toute signature avant le 31 décembre 2026 (valeur 990 à 1 490 €).",
       },
       {
         id: "pilot",
@@ -115,7 +115,7 @@ export const site = {
       {
         id: "referral",
         title: "Parrainage",
-        body: "1 mois offert pour chaque client parrainé qui signe.",
+        body: "1 mois offert au nouveau client parrainé, dès sa signature.",
       },
     ],
   },
@@ -133,8 +133,16 @@ export const site = {
     location: "Île de La Réunion",
     // Affichés seulement si showClientNames = true
     named: [
-      { name: "Boma Beach", place: "Boucan Canot, La Réunion" },
-      { name: "L'Uni Vert", place: "La Réunion" },
+      {
+        name: "Boma Beach",
+        place: "Boucan Canot, La Réunion",
+        logo: "/assets/logo-boma-beach.png",
+      },
+      {
+        name: "l'Univert Plage",
+        place: "La Réunion",
+        logo: "/assets/logo-univert.jpg",
+      },
     ],
     // Variante anonymisée (fallback)
     anonymous: [
